@@ -1,40 +1,168 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PSTK Tanjung Karang | 3D Printing & Services</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pusat Sains & Teknologi Komuniti — Tanjung Karang</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <img src="images/logo.png" alt="Logo PSTK" class="logo">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo PSTK" class="logo">
+        <div class="brand-text">
+          <h1>Pusat Sains & Teknologi Komuniti</h1>
+          <div class="subtitle">Tanjung Karang</div>
+        </div>
+      </div>
 
-    <h1>PSTK Tanjung Karang</h1>
-    <p class="tagline">Perkhidmatan 3D Printing & Printing Servis</p>
-
-    <div class="buttons">
-      <!-- WhatsApp -->
-      <a href="https://wa.me/601130677553" class="btn whatsapp">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="icon">
-        WhatsApp Kami
-      </a>
-
-      <!-- TikTok -->
-      <a href="https://www.tiktok.com/@pstk_tanjungkarang" class="btn tiktok">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="icon">
-        TikTok
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/pstktanjungkarang" class="btn facebook">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="icon">
-        Facebook
-      </a>
-
+      <nav class="nav">
+        <a href="#services">Perkhidmatan</a>
+        <a href="#projects">Acara</a>
+        <a href="#about">Tentang kami</a>
+        <a class="btn-outline" href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="kicker">MENUJU KE BANG MAN 💕</div>
+          <h2 class="hero-title">3D Printing & Program Komuniti<br><span class="accent">untuk pendidikan & perniagaan setempat</span></h2>
+          <p class="hero-desc">Kami bantu pelajar, komuniti dan belia untuk realisasikan idea impian mereka —  dari bawah ke atas.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/601130677553?text=Hai%20PSTK%2C%20saya%20berminat%20dengan%20servis%203D%20printing">💬 WhatsApp</a>
+            <a class="btn btn-ghost" href="#projects">Lihat Acara</a>
+          </div>
+
+          <div class="follow">
+            <span>Follow kami:</span>
+            <a href="https://www.tiktok.com/@pstk_tanjungkarang" aria-label="TikTok">TikTok</a> •
+            <a href="https://www.facebook.com/pstktanjungkarang" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="card">
+            <div class="card-media">
+              <!-- gunakan imej hero.jpg atau gradient -->
+              <img src="images/hero.jpg" alt="3D printing" onerror="this.style.display='none'">
+            </div>
+            <div class="card-body">
+              <h3>Servis Kami</h3>
+              <ul>
+                <li>Perkhidmatan 3D Printing</li>
+                <li>Kursus & Pensijilan</li>
+                <li>Acara & program komuniti</li>
+                <li>Sewaan Fasiliti</li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Tempah Sekarang</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section id="services" class="section container">
+      <h3 class="section-title">Perkhidmatan</h3>
+      <div class="grid-3">
+        <article class="card-simple">
+          <h4>Kursus & Pensijilan</h4>
+          <p>Kursus Juruterbang Dron Pertanian. </p>
+                • Bengkel Baik Pulih & Penyelenggaraan Dron. </p>
+                • Kem Robotik & Elektronik (STEM). </p>
+                • Kursus Asas Coding & IoTa. </p>
+        </article>
+        <article class="card-simple">
+          <h4>Sewaan Fasiliti</h4>
+          <p>   • Dewan Besar. </p>
+                • Makmal IT & Elektronik. </p>
+                • Pejabat (Co-working Space). </p>
+        </article>
+        <article class="card-simple">
+          <h4>Acara & Program Komuniti</h4>
+          <p>   • TechFest @ PSTK. </p>
+                • Drone Innovation Day. </p>
+                • STEM Community Day. </p>
+                • Youth Tech Challenge </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h3 class="section-title">Acara</h3>
+      <div class="grid-3">
+        <div class="thumb">Program Pengenalan Dron - Pelajar UM 20 Nov 2025</div>
+        <div class="thumb">Akan Datang</div>
+        <div class="thumb">Akan Datang</div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="about-grid">
+        <div>
+          <h3>Tentang PSTK</h3>
+          <p>PSTK diletakkan sebagai pusat inovasi komuniti yang menghubungkan sains, teknologi dan komuniti luar bandar. (Dengan Kerjasama HS Drone Expert)</p>
+          <p>Ditubuhkan pada 20 September 2025</p>
+        </div>
+        <div>
+          <h4>Waktu Operasi</h4>
+          <p>Isnin–Jumaat: 8:00a.m – 5:00p.m</p>
+          <h4>Lokasi</h4>
+          <p>Tali Air 2, Jalan Ban 3, Sungai Burung 45400 Tanjung Karang, Selangor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+    <!--  <h3 class="section-title">Hubungi kami</h3>
+      <div class="contact-grid">
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <label>Nama<input required name="name" /></label>
+          <label>Email<input type="email" name="email" /></label>
+          <label>Pesanan<textarea name="message" rows="4"></textarea></label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Hantar</button>
+            <a class="btn btn-ghost" href="https://wa.me/601130677553">WhatsApp</a>
+          </div>
+        </form>-->
+
+        <div class="contact-info">
+          <p><strong>Telefon:</strong> +6011-3067 7553</p>
+          <p><strong>Email:</strong> pstk.tanjungkarang@gmail.com</p>
+          <p><strong>Alamat:</strong> Tali Air 2, Jalan Ban 3, Sungai Burung 45400 Tanjung Karang, Selangor.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> Pusat Sains & Teknologi Komuniti — Tanjung Karang</div>
+      <div>Built with ❤️ · <a href="https://github.com/sousobu/pstk-tanjungkarang">GitHub</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // small helpers
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function submitForm(e) {
+      e.preventDefault();
+      alert('Terima kasih — borang dihantar (demo).');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
-
-
