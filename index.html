@@ -9,6 +9,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+<!-- EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Inisialisasi EmailJS (masukkan Public Key dari EmailJS kamu)
+  (function(){
+    emailjs.init("lGXJuQzRBltdrYxMk"); 
+  })();
+
+  // Fungsi submit borang
+  function submitForm(event) {
+    event.preventDefault(); // Elak reload page
+
+    const form = event.target;
+
+    const params = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    emailjs.send("service_xv7xyot", "template_b8za27f", params)
+      .then(function(response) {
+        alert("✅ Mesej berjaya dihantar! Terima kasih kerana menghubungi kami.");
+        form.reset();
+      }, function(error) {
+        console.error("Error:", error);
+        alert("❌ Gagal menghantar mesej. Sila cuba semula nanti.");
+      });
+  }
+</script>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
