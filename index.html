@@ -102,13 +102,25 @@
     </section>
 
     <section id="projects" class="section container">
+      <!-- Tambah bila ada acara lain -->
       <h3 class="section-title">Acara</h3>
       <div class="grid-3">
-        <div class="thumb">Program Pengenalan Dron - Pelajar UM 20 Nov 2025</div>
-        <div class="thumb">Akan Datang</div>
-        <div class="thumb">Akan Datang</div>
+        <div class="thumb">
+          <img src="images/acara-1.jpg" alt="Program Pengenalan Dron - Pelajar UM">
+          <p class="event-title">Program Pengenalan Dron - Pelajar UM</p>
+          <p class="event-date">20 Nov 2025</p>
+        </div>
       </div>
     </section>
+    <script>
+      document.querySelectorAll('.thumb').forEach(el => {
+        const img = el.querySelector('img');
+        if (!img || !img.getAttribute('src')) {
+          el.style.display = 'none';
+        }
+      });
+    </script>
+
 
     <section id="about" class="section container">
       <div class="about-grid">
@@ -119,19 +131,29 @@
         </div>
         <div>
           <h4>Waktu Operasi</h4>
-          <p>Isnin–Jumaat: 8:00a.m – 5:00p.m</p>
+          <p>Isnin – Jumaat: 8:00a.m – 5:00p.m</p>
           <h4>Telefon</h4>
           <p>+6011-3067 7553</p>
           <h4>Email</h4>
           <p>pstk.tanjungkarang@gmail.com</p>
           <h4>Alamat</h4>
-          <p>Tali Air 2, Jalan Ban 3, Sungai Burung 45400 Tanjung Karang, Selangor.</p>
+          <p>
+            Tali Air 2, Jalan Ban 3, Sungai Burung 45400 Tanjung Karang, Selangor.
+            <br>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Pusat+Sains+dan+Teknologi+Komuniti+Tanjung+Karang"
+              target="_blank"
+              class="btn-map"
+            >
+              📍 Google Maps
+            </a>
+          </p>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section container">
-      <h3 class="section-title">Hubungi kami</h3>
+      <h3 class="section-title">Email kami</h3>
       <div class="contact-grid">
         <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
           <label>Nama
@@ -145,7 +167,6 @@
           </label>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Hantar</button>
-            <a class="btn btn-ghost" href="https://wa.me/601130677553">WhatsApp</a>
           </div>
         </form>
       </div>
