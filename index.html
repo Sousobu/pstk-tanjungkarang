@@ -10,36 +10,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<form id="contactForm" onsubmit="submitForm(event)">
+  <label>Nama<input required name="name" /></label>
+  <label>Email<input type="email" name="email" /></label>
+  <label>Pesanan<textarea name="message" rows="4"></textarea></label>
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">Hantar</button>
+    <a class="btn btn-ghost" href="https://wa.me/601130677553">WhatsApp</a>
+  </div>
+</form>
+
 <script>
-  // Inisialisasi EmailJS (masukkan Public Key dari EmailJS kamu)
   (function(){
     emailjs.init("lGXJuQzRBltdrYxMk"); 
   })();
 
-  // Fungsi submit borang
   function submitForm(event) {
-    event.preventDefault(); // Elak reload page
+    event.preventDefault();
+    const form = document.getElementById("contactForm");
 
-    const form = event.target;
-
-    const params = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    emailjs.send("service_xv7xyot", "template_b8za27f", params)
-      .then(function(response) {
-        alert("✅ Mesej berjaya dihantar! Terima kasih kerana menghubungi kami.");
+    emailjs.sendForm("service_xv7xyot", "template_b8za27f", form)
+      .then(() => {
+        alert("✅ Mesej berjaya dihantar!");
         form.reset();
-      }, function(error) {
-        console.error("Error:", error);
+      }, (error) => {
+        console.error(error);
         alert("❌ Gagal menghantar mesej. Sila cuba semula nanti.");
       });
   }
 </script>
+
 
 <body>
   <header class="site-header">
