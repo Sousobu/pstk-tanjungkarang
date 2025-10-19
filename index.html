@@ -9,38 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-<form id="contactForm" onsubmit="submitForm(event)">
-  <label>Nama<input required name="name" /></label>
-  <label>Email<input type="email" name="email" /></label>
-  <label>Pesanan<textarea name="message" rows="4"></textarea></label>
-  <div class="form-actions">
-    <button class="btn btn-primary" type="submit">Hantar</button>
-    <a class="btn btn-ghost" href="https://wa.me/601130677553">WhatsApp</a>
-  </div>
-</form>
-
-<script>
-  (function(){
-    emailjs.init("lGXJuQzRBltdrYxMk"); 
-  })();
-
-  function submitForm(event) {
-    event.preventDefault();
-    const form = document.getElementById("contactForm");
-
-    emailjs.sendForm("service_xv7xyot", "template_b8za27f", form)
-      .then(() => {
-        alert("✅ Mesej berjaya dihantar!");
-        form.reset();
-      }, (error) => {
-        console.error(error);
-        alert("❌ Gagal menghantar mesej. Sila cuba semula nanti.");
-      });
-  }
-</script>
-
-
 <body>
   <header class="site-header">
     <div class="container header-inner">
