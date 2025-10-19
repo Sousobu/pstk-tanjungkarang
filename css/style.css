@@ -139,6 +139,16 @@ body{
   font-size: 1rem;
 }
 
+.contact-form {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 25px 35px;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 600px;  /* ubah dari 400px ke 600px supaya lebih panjang */
+  margin: 0 auto;    /* pastikan betul-betul di tengah */
+}  
+
 .form-actions {
   display: flex;
   gap: 1rem;
@@ -180,6 +190,13 @@ body{
   line-height: 1.6;
 }
 
+.contact-grid {
+  display: flex;
+  justify-content: center;   /* Tengah secara mendatar */
+  align-items: flex-start;
+  gap: 40px;
+}
+
 .contact-info p {
   margin: 0.5rem 0;
 }
@@ -214,8 +231,17 @@ body{
   transition:all .2s;
 }
 
-.btn-social.tiktok{background:#010101}
-.btn-social.tiktok:hover{background:#ff0050}
+.btn-social.tiktok {
+  border: 1px solid #fff; /* garisan putih */
+  background: #010101;   /* warna latar hitam TikTok */
+  color: #fff;            /* teks atau ikon putih */
+}
+
+.btn-social.tiktok:hover {
+  background: #ff0050;   /* warna merah jambu TikTok bila hover */
+  border-color: #ff0050; /* ikut warna hover juga */
+}
+
 
 .btn-social.facebook{background:#1877f2}
 .btn-social.facebook:hover{background:#0f62d1}
