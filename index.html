@@ -161,7 +161,7 @@
     <section id="contact" class="section container">
       <h3 class="section-title">Hubungi kami</h3>
       <div class="contact-grid">
-        <form class="contact-form" onsubmit="submitForm(event)">
+        <form id="contactForm" onsubmit="submitForm(event)">
           <label>Nama<input required name="name" /></label>
           <label>Email<input type="email" name="email" /></label>
           <label>Pesanan<textarea name="message" rows="4"></textarea></label>
@@ -170,6 +170,27 @@
             <a class="btn btn-ghost" href="https://wa.me/601130677553">WhatsApp</a>
           </div>
         </form>
+
+        <script>
+           (function(){
+              emailjs.init("lGXJuQzRBltdrYxMk"); 
+           })();
+
+           function submitForm(event) {
+             event.preventDefault();
+              const form = document.getElementById("contactForm");
+
+             emailjs.sendForm("service_xv7xyot", "template_b8za27f", form)
+               .then(() => {
+                 alert("✅ Mesej berjaya dihantar!");
+                 form.reset();
+              }, (error) => {
+               console.error(error);
+               alert("❌ Gagal menghantar mesej. Sila cuba semula nanti.");
+               });
+            }
+        </script>
+
 
         <div class="contact-info">
           <p><strong>Telefon:</strong> +6011-3067 7553</p>
